@@ -1,7 +1,8 @@
-import { build } from './app';
-import { config } from './toikit.config';
+import { build, setConfig, setRoot } from '@toikit/toikit';
+import dotenv from 'dotenv';
+import config from './config';
 
-(async function() {
-  await build(config);
-  process.exit(0);
-})();
+dotenv.config();
+setRoot(__dirname);
+setConfig(config);
+build();

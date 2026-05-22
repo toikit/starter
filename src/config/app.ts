@@ -1,6 +1,6 @@
-import ExampleModule from "./app/example";
+import ExampleModule from "@/app/example";
 
-export const config = {
+export default {
   port: 4000,
   modules: [
     // Add module here
