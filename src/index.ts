@@ -1,4 +1,4 @@
-import { setConfig, setRoot, start } from '@toikit/toikit';
+import { setConfig, setRoot, start } from '@toikit/core';
 import dotenv from 'dotenv';
 import config from './config';
 

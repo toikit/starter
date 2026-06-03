@@ -1,5 +1,5 @@
 {
-  "name": "node-ws",
+  "name": "@toikit/starter",
   "version": "0.0.1",
   "description": "",
   "author": "",
@@ -7,13 +7,14 @@
   "license": "MIT",
   "scripts": {
     "build": "rm -rf ./dist && npx tsc && npx tsc-alias && npm run cp-view && node dist/build.js",
+    "compile": "npx tsc && npx tsc-alias && npm run cp-view",
     "cp-view": "copyfiles -u 1 \"src/app/**/**/views/**/*\" dist",
-    "dev": "npm run build && nodemon main.ts",
+    "dev": "nodemon",
     "start": "node dist/index.js",
     "reload": "npm run build && npm run start"
   },
   "dependencies": {
-    "@toikit/toikit": "file:../toikit",
+    "@toikit/core": "^1.0.0",
     "axios": "^1.16.1",
     "copyfiles": "^2.4.1",
     "cors": "^2.8.6",
@@ -23,8 +24,10 @@
   },
   "devDependencies": {
     "@types/node": "^20.19.41",
+    "nodemon": "^3.1.11",
     "ts-node": "^10.9.2",
     "tsc-alias": "^1.8.17",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.9.3"
   }
 }
