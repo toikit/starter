@@ -21,7 +21,7 @@ export default class ExampleModule extends BaseModule {
     console.log('Setting up example module');
   }
 
-  mounted() {
+  ready() {
     console.log('Mounting example module');
   }
 }
